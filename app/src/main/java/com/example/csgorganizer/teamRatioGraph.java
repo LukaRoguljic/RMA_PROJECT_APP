@@ -46,6 +46,7 @@ public class teamRatioGraph extends AppCompatActivity {
         barChart.setScaleEnabled(true);
 
 
+
     }
 
 
