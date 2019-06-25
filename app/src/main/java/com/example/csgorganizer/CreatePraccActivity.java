@@ -14,7 +14,7 @@ public class CreatePraccActivity extends AppCompatActivity {
     DatabaseHelper myDB;
 
     EditText etOpponent, etDate, etComment, etMaps;
-    Button btnAddData;
+    Button btnAddData, btnRemoveData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +26,10 @@ public class CreatePraccActivity extends AppCompatActivity {
         etComment   =(EditText)findViewById(R.id.etComment);
         etMaps      =(EditText)findViewById(R.id.etMap);
         btnAddData  =(Button)findViewById(R.id.btnAddData);
+        btnRemoveData = (Button)findViewById(R.id.btnRemoveData);
 
         AddData();
+        RemoveData();
     }
 
     public void AddData(){
@@ -46,6 +48,16 @@ public class CreatePraccActivity extends AppCompatActivity {
                }
                 Intent secondActivityIntent = new Intent(CreatePraccActivity.this, SecondActivity.class);
                 startActivity(secondActivityIntent);
+            }
+        });
+
+    }
+
+    public void RemoveData(){
+        btnRemoveData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDB.deleteData();
             }
         });
 

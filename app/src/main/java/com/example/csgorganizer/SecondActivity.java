@@ -5,18 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
-
     private Button createPractice;
+    private Button practiceButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
         createPractice      = (Button)findViewById(R.id.createTrainingBtn);
-
+        practiceButton      = (Button)findViewById(R.id.practiceBtn);
         createPractice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,5 +24,14 @@ public class SecondActivity extends AppCompatActivity {
                 startActivity(createPractice);
             }
         });
+
+        practiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent practiceButton =  new Intent(SecondActivity.this, ShowPractices.class);
+                startActivity(practiceButton);
+            }
+        });
     }
+
 }
