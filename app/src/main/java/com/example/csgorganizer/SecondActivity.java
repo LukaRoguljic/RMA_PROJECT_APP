@@ -10,13 +10,17 @@ import android.widget.Toast;
 public class SecondActivity extends AppCompatActivity {
     private Button createPractice;
     private Button practiceButton;
+    private Button teamStatButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
         createPractice      = (Button)findViewById(R.id.createTrainingBtn);
         practiceButton      = (Button)findViewById(R.id.practiceBtn);
+        teamStatButton      = (Button)findViewById(R.id.teamStatBtn);
+
         createPractice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +34,14 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent practiceButton =  new Intent(SecondActivity.this, ShowPractices.class);
                 startActivity(practiceButton);
+            }
+        });
+
+        teamStatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent teamStartButton = new Intent(SecondActivity.this, teamRatioGraph.class);
+                startActivity(teamStartButton);
             }
         });
     }
