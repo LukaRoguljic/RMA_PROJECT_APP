@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText TeamName;
     private EditText TeamPassword;
     private Button   Login;
-
+    //TEST GIT
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
