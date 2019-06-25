@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CSGOrganizer</string>
+    <string name="usernameInputText">Enter your username</string>
+    <string name="tv_passwordText">TEAM PASSWORD</string>
+    <string name="btn_loginText">LOGIN</string>
+    <string name="tv_teamNameText">TEAM NAME</string>
+    <string name="et_hintPassword">Enter team password</string>
+    <string name="create_practice">Create Practice</string>
+    <string name="current_form">Current Form</string>
+    <string name="upcoming_practices">Upcoming Practices</string>
+</resources>
