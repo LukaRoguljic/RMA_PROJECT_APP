@@ -11,6 +11,7 @@ public class SecondActivity extends AppCompatActivity {
     private Button createPractice;
     private Button practiceButton;
     private Button teamStatButton;
+    private Button mapButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class SecondActivity extends AppCompatActivity {
         createPractice      = (Button)findViewById(R.id.createTrainingBtn);
         practiceButton      = (Button)findViewById(R.id.practiceBtn);
         teamStatButton      = (Button)findViewById(R.id.teamStatBtn);
+        mapButton           = (Button)findViewById(R.id.mapBtn);
 
         createPractice.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,14 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent teamStartButton = new Intent(SecondActivity.this, teamRatioGraph.class);
                 startActivity(teamStartButton);
+            }
+        });
+
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapButton = new Intent(SecondActivity.this, MapActivity.class);
+                startActivity(mapButton);
             }
         });
     }
