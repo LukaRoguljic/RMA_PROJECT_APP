@@ -110,7 +110,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public String[] getLocationNames(){
-        String[] locationNames = new String[10];
+        String[] locationNames = new String[1000];
         int i = 0;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM cities WHERE CITYNAME IS NOT NULL", null);
@@ -118,6 +118,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             locationNames[i] = cursor.getString(1);
             i = i + 1;
         }
+        //db.execSQL("delete from cities");
         return locationNames;
     }
 

@@ -75,18 +75,18 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
 
         String[] nameArray = myDB.getLocationNames();
         Geocoder obje = new Geocoder(this);
-        double latitude = 0,longtitude = 0;
+        double latitude = 0,longitude = 0;
         int i = 0;
 
-        for (i = 0; i < 10; i++){
+        for (i = 0; i < 11; i++){
             if(nameArray[i] == null){}
             else{
                 try{
                     List<Address> coordinates = obje.getFromLocationName(nameArray[i], 1);
                     if (coordinates.size() >  0) {
                         latitude = coordinates.get(0).getLatitude();
-                        longtitude = coordinates.get(0).getLongitude();
-                        LatLng newLocation = new LatLng(latitude, longtitude);
+                        longitude = coordinates.get(0).getLongitude();
+                        LatLng newLocation = new LatLng(latitude, longitude);
                         map.addMarker(new MarkerOptions().position(newLocation).title("CSGO"));
                     }
                 }catch(IOException e){
