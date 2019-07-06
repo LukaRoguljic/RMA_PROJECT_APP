@@ -85,9 +85,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long seconds = millis/1000;
         long hours = seconds/3600;
 
-        /*String sql = "DELETE FROM " + TABLE_NAME + " WHERE (hours - CREATED) >= 24";
-        db.execSQL(sql);*/
-        return db.delete(TABLE_NAME, hours + " - " + COL_6 + " >= 0" , null);
+        //String sql = "DELETE FROM " + TABLE_NAME + " WHERE (hours - CREATED) >= 48";
+        //db.execSQL(sql);
+        return db.delete(TABLE_NAME, hours + " - " + COL_6 + " >= 48" , null);
     }
 
     public ArrayList<ListItem> getAllData(){
